@@ -1,0 +1,271 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>index</title>
+    <!-- TemplateEndEditable -->
+    <!-- TemplateBeginEditable name="head" -->
+    <!-- TemplateEndEditable -->
+    <style type="text/css"> 
+<!-- 
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	background-color: #f2f2f2;
+}
+
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+.thrColElsHdr #container {
+	width: 100em;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #f2f2f2;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 0px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+} 
+.thrColElsHdr #header {
+	background: #f2f2f2;
+	padding: 0 10px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+} 
+.thrColElsHdr #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+
+/* Tips for sidebar1:
+1. Be aware that if you set a font-size value on this div, the overall width of the div will be adjusted accordingly.
+2. Since we are working in ems, it's best not to use padding on the sidebar itself. It will be added to the width for standards compliant browsers creating an unknown actual width. 
+3. Space between the side of the div and the elements within it can be created by placing a left and right margin on those elements as seen in the ".thrColElsHdr #sidebar1 p" rule.
+*/
+.thrColElsHdr #sidebar1 {
+	float: left;
+	width: 11em; /* since this element is floated, a width must be given */
+	background: #f2f2f2; /* the background color will be displayed for the length of the content in the column, but no further */
+	padding: 15px 0; /* top and bottom padding create visual space within this div */
+}
+.thrColElsHdr #sidebar2 {
+	float: right;
+	width: 11em; /* since this element is floated, a width must be given */
+	background: #f2f2f2; /* the background color will be displayed for the length of the content in the column, but no further */
+	padding: 10px 0; /* top and bottom padding create visual space within this div */
+}
+.thrColElsHdr #sidebar1 h3, .thrColElsHdr #sidebar1 p, .thrColElsHdr #sidebar2 p, .thrColElsHdr #sidebar2 h3 {
+	margin-left: 10px; /* the left and right margin should be given to every element that will be placed in the side columns */
+	margin-right: 10px;
+}
+
+/* Tips for mainContent:
+1. If you give this #mainContent div a font-size value different than the #sidebar1 div, the margins of the #mainContent div will be based on its font-size and the width of the #sidebar1 div will be based on its font-size. You may wish to adjust the values of these divs.
+2. The space between the mainContent and sidebar1 is created with the left margin on the mainContent div.  No matter how much content the sidebar1 div contains, the column space will remain. You can remove this left margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends.
+3. To avoid float drop, you may need to test to determine the approximate maximum image/element size since this layout is based on the user's font sizing combined with the values you set. However, if the user has their browser font size set lower than normal, less space will be available in the #mainContent div than you may see on testing.
+4. In the Internet Explorer Conditional Comment below, the zoom property is used to give the mainContent "hasLayout." This avoids several IE-specific bugs that may occur.
+*/
+.thrColElsHdr #mainContent {
+ 	margin: 0 12em 0 12em; /* the right margin can be given in ems or pixels. It creates the space down the right side of the page. */
+} 
+.thrColElsHdr #footer {
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#f2f2f2;
+} 
+.thrColElsHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+
+/* Miscellaneous classes for reuse */
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+.style1 {
+	color: #940204;
+	font-family: "Palatino Linotype";
+	font-size: 52px;
+	font-weight: bold;
+}
+.style2 {font-family: "Palatino Linotype"}
+.style4 {
+	color: #940204;
+	font-family: "Palatino Linotype";
+	font-size: medium;
+	font-weight: bold;
+}
+.style6 {font-family: "Palatino Linotype"; font-size: x-small; }
+.style8 {font-size: small}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.style9 {
+	font-family: "Palatino Linotype";
+	font-size: small;
+	text-align: center;
+}
+body,td,th {
+	font-family: Palatino Linotype;
+}
+--> 
+    </style><!--[if IE]>
+<style type="text/css"> /* place css fixes for all versions of IE in this conditional comment */.thrColElsHdr #sidebar1, .thrColElsHdr #sidebar2 { padding-top: 30px; }.thrColElsHdr #mainContent { zoom: 1; padding-top: 15px; }
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */</style><![endif]-->
+</head>
+  <body class="thrColElsHdr">
+    <div id="container">
+      <div id="header">
+        <table width="1589" border="0">
+          <tbody>
+            <tr>
+              <td width="1266"><p><u style="font-size: 50px; color: #940204; font-style: normal; font-weight: normal; font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', serif;">Cremona transformations and the Sarkisov program<br />
+              (Ferrara - January 14, 2020)<br />
+              </u></p></td>
+              <td width="313"><a href="http://www.unife.it/" target="_blank"><img src="../../images/logo.png" width="260" height="108" alt=""/></a></td>
+            </tr>
+            <tr>
+              <td colspan="2"><hr align="center" size="3" width="95%" HR COLOR="#940204" noshade>
+              <br /></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- end #header --></div>
+      <div id="sidebar1">
+        <p class="style4"><br />
+        </p>
+      </div>
+      <div id="sidebar2">
+        <p><br />
+          <br />
+          
+        </p>
+        <p>&nbsp;</p>
+<p>&nbsp;</p>
+      </div>
+      <div id="mainContent">
+        <table width="1218" border="0">
+          <tbody>
+            <tr>
+              <td width="1204" height="182"><p align="left">              
+                <h2>Speakers</h2>
+                
+                <p>Alberto Calabri<br />
+              Anne-Sophie Kaloghiros<br />
+              Giovanni Staglian&ograve;               <br />
+              </p></td>
+              <td width="10" style="font-size: 14px; text-align: left;"><p>&nbsp;</p>
+              <p>&nbsp;</p></td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="1215" border="0">
+          <tbody>
+            <tr>
+              <td width="1204" height="577"><p align="left">              
+                <h2>Information and Contacts</h2>
+                
+                University of Ferrara, Department of Mathematics and Computer Science.<br />
+                Via Machiavelli, 30 - 44121 Ferrara, Italy.                <br />
+                Organizers: Luigi Lombardi (<a href="mailto:luigi.lombardi@unimi.it">luigi.lombardi@unimi.it</a>), Alex Massarenti (<a href="mailto:msslxa@unife.it">msslxa@unife.it</a>), Luca Tasin (<a href="mailto:luca.tasin@unimi.it">luca.tasin@unimi.it</a>), Stefano Urbinati (<a href="mailto:urbinati.st@gmail.com">urbinati.st@gmail.com</a>)
+<p align="left">&nbsp;</p>
+                <h2>Program and Abstracts (All the seminars will take place in room 1) - <a href="Locandina_Ferrara.pdf" title="Schedule" target="_blank"><em>Schedule</em></a></h2>
+                <p><strong>Alberto Calabri</strong><br />
+                  <strong>Title</strong>: <em><strong>Recent results on plane Cremona transformations</strong></em><br />
+                <strong>Abstract</strong>: The group of plane Cremona transformations is endowed with a natural topology and the set of maps of some bounded degree is closed. We will review some known properties of the quasi-projective variety which parametrizes plane Cremona maps of fixed degree. Then, we will address the question of determining which plane Cremona maps of small degree are limits of maps of higher degree. This talk is mainly based on joint works with J&eacute;r&eacute;my Blanc and with Cinzia Bisi and Massimiliano Mella. </p>
+                <p><strong>Anne-Sophie Kaloghiros</strong><br />
+                  <strong>Title</strong>: <em><strong>Volume preserving maps of Calabi-Yau pairs with a toric model  </strong></em><br />
+                <strong>Abstract</strong>: A Calabi-Yau pair (X, D) consists of a normal projective variety X and a reduced integral divisor  D with  K_X  + D  =  0. A birational map  (X, D_X  ) ---&gt;  (Y, D_Y) between CY pairs is volume preserving if pullbacks of  K_X  + D_X  and K_Y  + D_Y  to high enough models coincide. <br />
+                The pair formed by a toric variety and its boundary divisor is an example of CY pair,  and mutations of algebraic tori can be   extended to volume preserving birational maps of toric pairs. In this   talk, I will discuss a conjecture that states that every volume   preserving birational map between CY pairs that have a toric model (i.e. that are volume preserving birational to toric pairs) is a chain   of mutations. I will give some evidence in support of the conjecture in   dimension three. </p>
+                <p><strong>Giovanni Staglian&ograve;</strong><br />
+                  <strong>Title</strong>: <em><strong>Kuznetsov's conjecture and rationality of cubic fourfolds</strong></em> (<a href="Slides_Giovanni.pdf" target="_blank">Slides</a>)<br />
+                  <strong>Abstract</strong>: We recall the main conjectures about the important classical   problem (still unsolved) on the rationality of smooth cubic   hypersurfaces in a 5-dimensional projective space, cubic fourfolds for short, and we present recent   contributions in favor of these conjectures. We will also briefly   illustrate similar conjectures and results for Gushel-Mukai fourfolds,   that is for smooth quadric hypersurfaces in del Pezzo fivefolds. The   talk is based on some joint works with Francesco Russo and the recent   collaboration with Michael Hoff. <br />
+                </p>
+                <p align="left">&nbsp;</p>
+                <h2>Partecipants<br />
+                </h2>
+                <p>                  Cinzia Bisi<br />
+                  Alberto Calabri<br />
+                  Alex Casarotti<br />
+                  Elisabetta Colombo<br />
+                  Elsa Corniani
+                  <br />
+                  Kacper Grzelakowski                  <br />
+                  Paltin Ionescu
+                  <br />
+                  Anne-Sophie Kaloghiros
+                  <br />
+                  Luigi Lombardi<br />
+                  Alex Massarenti
+                  <br />
+                  Massimiliano Mella<br />
+                  Ernestro Mistretta<br />
+                  Thi Ngoc Giao Nguyen                  <br />
+                  Giovanni Staglian&ograve; 
+                  <br />
+                  Luca Tasin<br />
+                  Stefano Urbinati
+                  <br />
+                  Francesco Zucconi
+                  <br />
+              </p></td>
+              <td width="10"><br />
+              <br /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+      <div id="footer">
+        <table width="1588" border="0">
+          <tbody>
+            <tr>
+              <td width="137">&nbsp;</td>
+              <td width="1334"><u>
+                <hr align="center" size="3" width="97%" HR COLOR="#940204" noshade>
+              </u></td>
+              <td width="103">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <!-- end #footer --> </div>
+      <!-- end #container --></div>
+  </body>
+</html>

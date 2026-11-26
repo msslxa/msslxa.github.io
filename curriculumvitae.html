@@ -1,0 +1,410 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>curriculumvitae</title>
+    <!-- TemplateEndEditable -->
+    <!-- TemplateBeginEditable name="head" -->
+    <!-- TemplateEndEditable -->
+    <style type="text/css">
+		
+		html {
+  overflow-y: scroll; /* Forza la barra di scorrimento sempre visibile */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, -system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  background-color: #f3f4f6;
+  color: #111827;
+  text-align: center;
+}
+
+/* Layout wrapper */
+.thrColElsHdr #container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 16px auto 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  text-align: left;
+  padding: 24px 32px 40px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.thrColElsHdr #header {
+  padding: 8px 0 18px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.thrColElsHdr #header table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.thrColElsHdr #header td {
+  vertical-align: middle;
+}
+
+.thrColElsHdr #header u {
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #111827;
+font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.thrColElsHdr #header img {
+  display: block;
+}
+
+/* Top-right Unife logo slightly smaller */
+.thrColElsHdr #header img[src$="logo.png"] {
+  width: 280px;
+  height: 69px;
+}
+
+#sidebar2 img[src$="logo_unife.png"]{
+  width: 110px !important;   /* o 90, 120… */
+  height: 110px !important;
+}
+
+#sidebar2 img[src$="indam_logo.png"] {
+  width: 110px !important;   /* o 90, 120… */
+  height: 30px !important;
+}
+
+/* Side logos slightly smaller */
+.thrColElsHdr #sidebar1 img[src$="logo_unife.png"],
+.thrColElsHdr #sidebar1 img[src$="indam_logo.png"] {
+  max-width: 115px;
+  height: auto;
+}
+
+/* Columns */
+.thrColElsHdr #sidebar1,
+.thrColElsHdr #sidebar2 {
+  float: left;
+  width: 180px; /* narrower side stripes */
+  background: transparent;
+  padding: 8px 0 0;
+}
+
+.thrColElsHdr #sidebar2 {
+  float: right;
+}
+
+.thrColElsHdr #mainContent {
+  margin: 0 200px 0 200px; /* central band wider */
+  padding-top: 4px;
+}
+
+/* Sidebar typography */
+.style2 {
+  font-size: 0.92rem;
+  color: #374151;
+}
+
+.style4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+/* General typography */
+h1, h2, h3, h4 {
+font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: 1.55rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Links: dark red like the header text */
+a {
+  color: #940204;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5b0203;
+  text-decoration: underline;
+}
+
+/* Sidebar links */
+#sidebar1 a,
+#sidebar2 a {
+  display: inline-block;
+  padding: 2px 0;
+}
+
+/* Contact block on the home page a bit smaller */
+.contact-block {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Tables in content */
+#mainContent table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#mainContent td,
+#mainContent th {
+  padding: 4px 6px;
+  vertical-align: top;
+}
+
+/* Images in main content */
+#mainContent img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 8px auto;
+}
+
+/* Specific adjustment: central image on Computer Algebra page */
+#mainContent img[src$="Mag_Fer.png"] {
+  max-width: 70%;
+}
+
+/* Align the PDF icon to the right edge of its table cell */
+#mainContent img[src$="pdf_d.png"] {
+  margin: 8px 0 8px auto;
+}
+
+/* Footer */
+.thrColElsHdr #footer {
+	clear: both;  
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.78rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.thrColElsHdr #footer table {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.thrColElsHdr #footer td {
+  white-space: nowrap; /* keep “A. M. - HOME PAGE” and “DMI - UNIFE” on one line each */
+  padding: 0 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .thrColElsHdr #container {
+    margin: 16px auto 24px;
+    padding: 20px 18px 28px;
+  }
+
+  .thrColElsHdr #sidebar1,
+  .thrColElsHdr #sidebar2 {
+    width: 170px;
+  }
+
+  .thrColElsHdr #mainContent {
+    margin: 0 190px 0 190px;
+  }
+}
+
+@media (max-width: 900px) {
+  .thrColElsHdr #sidebar1,
+  .thrColElsHdr #sidebar2 {
+    float: none;
+    width: auto;
+    margin-top: 24px;
+  }
+
+  .thrColElsHdr #mainContent {
+    margin: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .thrColElsHdr #header u {
+    font-size: 1.7rem;
+  }
+
+  .thrColElsHdr #header img[src$="logo.png"] {
+    width: 220px;
+  }
+}
+
+.style9 {
+font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: small;
+  text-align: center;
+}
+
+body, td, th {
+  font-family: 'Montserrat', sans-serif;
+}
+
+</style><!--[if IE]>
+<style type="text/css"> /* place css fixes for all versions of IE in this conditional comment */.thrColElsHdr #sidebar1, .thrColElsHdr #sidebar2 { padding-top: 30px; }.thrColElsHdr #mainContent { zoom: 1; padding-top: 15px; }
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */</style><![endif]-->
+</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+  <body class="thrColElsHdr">
+    <div id="container">
+      <div id="header">
+        <table width="1589" border="0">
+          <tbody>
+            <tr>
+              <td width="1266"><u style="font-size: 68px; color: #940204 !important; font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+  A.M. - Home Page
+</u>
+</u></td>
+              <td width="313"><a href="http://www.unife.it/" target="_blank"><img src="images/logo.png" width="313" height="81" alt=""/></a></td>
+            </tr>
+            <tr>
+              <td colspan="2"><hr align="center" size="3" width="95%" HR COLOR="#940204" noshade>
+              <br /></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- end #header --></div>
+      <div id="sidebar1">
+        
+        <p class="style2"><a href="index.html">Home</a><br />
+          <a href="publications.html">Publications</a><br />
+          <a href="curriculumvitae.html">Curriculum Vitae</a><br />
+          <a href="notes.html">Notes</a>
+          <a href="teaching.html">&nbsp;</a><br />
+			<a href="outreachnotes.html">Outreach Notes</a><br />
+          <br />
+          <u class="style4">Links</u><br />
+          <br />
+          <a target="_blank" href="https://dmi.unife.it/en?set_language=en">DMI - UNIFE</a> <br />
+			 <a target="_blank" href="http://www.gma.uff.br/">GMA - UFF</a> <br />
+			 <a target="_blank" href="http://www.ime.uff.br/">IME - UFF</a> <br />
+          <a target="_blank" href="http://www.impa.br/">IMPA</a><br />
+          <a target="_blank" href="http://www.sissa.it/">SISSA</a><br />
+          <a href="TBG/BirationalTopics.html" title="Topics in Birational Geometry" target="_blank">TBG</a><br />
+		  <a target="_blank" href="https://sites.google.com/unife.it/agafe-2024/home-page">AGaFe 2024</a> <br />
+<a target="_blank" href="https://sites.google.com/unife.it/agafe-2026/home-page">AGaFe 2026</a> <br />
+          <a target="_blank" href="https://sites.google.com/unitn.it/inabag/home?authuser=0">INABAG</a> <br />
+          <a href="prin2022.html">PRIN 2022</a><br />
+          <br>
+          <u class="style4">Software</u><br />
+          <br />
+          <a href="computeralgebra.html">Computer Algebra</a><br />
+        </p>
+      </div>
+      <div id="sidebar2">
+        <p><span class="style2"><u class="style4">Links</u><br />
+        <br />
+        <a target="_blank" href="http://arxiv.org/">arXiv.org</a><br />
+            <a target="_blank" href="http://www.ams.org/mathscinet/">MathSciNet</a><br />
+            <a target="_blank" href="http://mathoverflow.net/">MathOverflow</a><br />
+            <a target="_blank" href="http://www.numdam.org/?lang=fr">Nundam</a><br />
+            <a target="_blank" href="http://stacks.math.columbia.edu/">The Stacks
+            Project</a><br />
+            <a target="_blank" href="http://www.grothendieckcircle.org/">Grothendieck
+            Circle</a><br />
+            <a target="_blank" href="https://oeis.org/">OEIS</a></span><br />
+         <center
+          <a href="http://www.unife.it/" target="_blank"><img src="images/logo_unife.png" width="148" height="160"  alt=""/></a><br />
+          
+        </p>
+        <p><a href="https://www.altamatematica.it/en/" target="_blank"><img src="images/indam_logo.png" width="147" height="33" alt=""/></a></p>
+        </center>
+<p><span class="style2"><a href="http://www.grdb.co.uk/" target="_blank">Graded Ring Database</a><a target="_blank" href="https://www.fanography.info/"></a><br />
+  <a href="https://www.fanography.info/" target="_blank">Fanography</a><br />
+      </div>
+      <div id="mainContent"><strong><u>
+        <h2>Curriculum Vitae<br />
+      </h2>
+      </u></strong>
+        <table>
+        <tbody>
+          <tr>
+            <td height="45">Present position</td>
+            <td>Associate Professor, Department of Mathematics and Computer Science, University of Ferrara, Italy.</td>
+          </tr>
+			<tr>
+            <td height="45">2018 - 2021</td>
+            <td>Researcher (RTDb), Department of Mathematics and Computer Science, University of Ferrara, Italy.</td>
+          </tr>
+          <tr>
+            <td height="45">2015 - 2018</td>
+            <td>Professor Adjunto, Universidade Federal Fluminense, Niter&oacute;i, Rio de Janeiro, Brazil.</td>
+          </tr>
+          <tr>
+            <td height="45">2013 - 2015</td>
+            <td>Postdoc (Posdoutorado de Excel&ecirc;ncia), <a href="http://www.impa.br/opencms/en/" target="_blank">IMPA, Rio de Janeiro, Brazil</a>.</td>
+          </tr>
+          <tr>
+            <td height="45">2009 - 2013<br /></td>
+            <td>Ph.D. in Mathematics (Geometry), SISSA, Trieste, Italy.</td>
+          </tr>
+          <tr>
+            <td width="267" height="45">2007 - 2009</td>
+            <td width="937">Master Degree in Mathematics cum laude, University of Ferrara, Italy.</td>
+          </tr>
+          <tr>
+            <td height="45">2004 - 2007<br /></td>
+            <td>Bachelor Degree in Mathematics cum laude, University of Ferrara, Italy.</td>
+          </tr>
+          <tr>
+            <td height="45">1999 - 2004</td>
+            <td>Graduation cum laude, Liceo Scientifico Tullio Levi-Civita, Codigoro (FE), Italy.</td>
+          </tr>
+          <tr>
+          </tr>
+          <tr>
+            <td height="45">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="24">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            
+        </tbody>
+      </table>
+      </div>
+      <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+      <div id="footer">
+        <table width="1588" border="0">
+          <tbody>
+            <tr>
+              <td width="137"><span class="style4"><u>A.M. - Home Page 
+              </u></span></td>
+              <td width="1269"><u>
+                <hr align="center" size="3" width="97%" HR COLOR="#940204" noshade>
+              </u></td>
+              <td width="103"><span class="style4"> <u>DMI - UNIFE</u></span></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- end #footer --> </div>
+      <!-- end #container --></div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+
+
+\usepackage[left=1.1in,top=0.9in,bottom=0.83in,right=1.1in,nohead,nofoot]{geometry}
+
+                                        %   \textsc{}
+\pagestyle{plain}
+\usepackage{newlfont}
+
+\usepackage{latexsym}
+\usepackage{amsthm}
+
+\theoremstyle{definition}                    %stile corsivo
+\newtheorem{teo}{Theorem}%[section]
+\newtheorem{con}{Conjecture}%[section]      %definizione ambiente teorema
+\newtheorem{prop}[teo]{Proposition}    %definizione ambiente proposizione
+\newtheorem{cor}[teo]{Corollary}       %definizione ambiente corollario
+\newtheorem{lem}[teo]{Lemma}            %definizione ambiente lemma
+\theoremstyle{definition}               %stile roman
+%\newtheorem{defin}{Definizione}[chapter]%definizione ambiente definizione TO
+%\newtheorem{ese}{Esempio}[chapter]      %definizione ambiente esempio TO
+%\theoremstyle{remark}                   %stile per osservazioni
+                                     %           $\seq{q_1,q_2}$
+\newtheorem{de}[teo]{Definition}
+\newtheorem{note}[teo]{Note}
+\newtheorem{no}[teo]{Notation}
+\newtheorem{ex}[teo]{Example}
+\newtheorem{car}[teo]{Caratterizzazione}
+\newtheorem{re}[teo]{Remark}
+\newtheorem{res}[teo]{Remarks}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\I}{\mathcal{I}}
+\newcommand\vs[1]{\par\vspace*{#1\baselineskip}}
+
+%opening
+\title{Recent advances in Linear series and Newton-Okounkov bodies}
+\author{Ciro Ciliberto, Alex K\"uronya, Victor Lozovanu, Stefano Urbinati}
+
+\begin{document}
+
+\maketitle
+
+\section*{Workshop Description}
+
+
+Padova, 19/04/2013
+
+\vskip .5cm
+
+
+Linear series are a basic and fundamental tool in algebraic geometry.  Many results and techniques from their study are essential in different parts of the field.  There have been several new developments in the last few years and it is almost impossible to keep track of all of them.
+
+A first example is given by the traditional Nagata Conjecture, that can be expressed in asymptotic terms using either Seshadri constants or Waldschmidt constants. Recently it has become apparent that Nagata Conjecture for points in the projective plane is a manifestation of a much more general picture concerning configurations of disjoint linear subspaces of a projective space. 
+
+In a second instance, vector bundles have emerged as powerful tools for analyzing linear series on curves and surfaces. A classical result of this nature is Reider's theorem that gives full conditions on surfaces for adjoint line bundles to be globally generated. More recently, the viewpoints and techniques of higher dimensional geometry have started to play a central role. 
+
+One of the main focuses of the workshop will be on Newton-Okounkov bodies. Their definition originates from papers due to A. Okounkov in the 1990s (for instance \cite{ok}). More recently, Lazarsfeld and Musta{\c{t}}{\u{a}} \cite{lm} and independently Kaveh and Khovanskii \cite{kk} initiated an intensive research on the topic recording strong relations of the construction to properties of linear series that were not observed at first. 
+The idea of the construction of Newton-Okounkov bodies is to associate simple convex-geometric objects to linear series on normal varieties. This idea comes as a generalization of the toric case, where to each divisor $D$ one associates a polytope $P_D$. As for the toric, the Newton-Okounkov body is a convex body which encodes several properties of linear series, e.g. their volume. In another direction in \cite{dave}, it is shown that varieties having an ample divisor with a rational polyhedral Newton-Okounkov body with respect to some flag, admit a flat degeneration to a toric variety, giving a nice way of studying the initial variety from it's toric degeneration. For linear series, Newton-Okounkov bodies constitute a concise and accessible way to express and control various asymptotic invariants, and measure the positivity properties of the underlying divisors.
+
+\vskip .5cm
+
+The aim of the workshop is to bring together experts in the field and have a comparison of production in the different possible directions of research. 
+The workshop will have a number of introductory talks in the morning, whose goal is to stimulate further discussions. In the afternoon there will be a division into working groups on topics and issues chosen by the participants themselves. 
+
+This methodology has already been tested in Warsaw in the fall 2013 and gave excellent results both on a personal level of the participants and at the mathematical level, obtaining new collaborations and results during the same week or later.
+
+
+
+
+\begin{thebibliography}{FM}
+
+\bibitem{dave} Anderson, D., \emph{Okounkov bodies and toric degenerations}, Math. Ann. 356, No. 3, 1183-1202 (2013).
+
+\bibitem{kk} Kaveh, K, Khovanskii, A. G, \emph{Newton-Okounkov bodies, semigroups of integral points, graded algebras and intersection theory},  Ann. of Math. (2) 176 (2012), no. 2, 925-978.
+
+\bibitem{lm} Lazarsfeld, R., Musta{\c{t}}{\u{a}}, M., \emph{Convex bodies associated to linear series}, Ann. Sci. \'Ec. Norm. Sup\'er. (4) 42 (2009), no. 5, 783-835.
+
+\bibitem{ok} Okounkov, A., \emph{Brunn-Minkowski inequality for multiplicities}, Invent. Math. 125 (1996), 405-411.
+
+\end{thebibliography}
+
+
+
+
+\end{document}
+
+
+
